@@ -1,0 +1,72 @@
+:root{
+  --bg:#0e0f13;
+  --card:#151720;
+  --text:#eaeaf0;
+  --muted:#a6a8b3;
+  --brand:#e63946;
+  --brand-2:#ffbe0b;
+  --max:1100px;
+  --radius:14px;
+  --shadow:0 10px 30px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,sans-serif;line-height:1.6}
+img{max-width:100%;height:auto;border-radius:12px}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:var(--max);margin:auto;padding:0 20px}
+
+/* Header */
+.site-header{position:sticky;top:0;background:rgba(14,15,19,.85);backdrop-filter:saturate(160%) blur(10px);z-index:10;border-bottom:1px solid rgba(255,255,255,.06)}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;min-height:64px}
+.brand{font-weight:800;letter-spacing:.3px}
+.nav a{margin-left:18px}
+.nav-toggle{display:none;background:none;border:0;color:var(--text);font-size:26px}
+
+/* Hero */
+.hero{padding:68px 0}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.hero-copy h1{margin:0 0 8px;font-size:clamp(28px, 4vw, 40px);line-height:1.15}
+.badges{display:flex;gap:12px;list-style:none;padding:0;margin:16px 0 0}
+.badges li{background:#1d2030;border:1px solid rgba(255,255,255,.06);padding:6px 10px;border-radius:999px;font-size:14px;color:var(--muted)}
+.img-placeholder{background:#222530;border:1px dashed #3a3d48;padding:40px;border-radius:12px;text-align:center;color:var(--muted)}
+
+/* Sections */
+.section{padding:56px 0}
+.section h2{font-size:clamp(24px,3vw,32px);margin:0 0 18px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--card);padding:22px;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.05)}
+.card h3{margin-top:0}
+.note{margin-top:14px;color:var(--muted)}
+
+/* Gallery */
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+.contact-form{background:var(--card);padding:22px;border-radius:var(--radius);border:1px solid rgba(255,255,255,.05);box-shadow:var(--shadow)}
+.contact-form label{display:block;margin-bottom:12px}
+.contact-form input,.contact-form textarea{width:100%;padding:12px 14px;border-radius:10px;border:1px solid #2a2d38;background:#171922;color:var(--text)}
+.contact-form button{margin-top:6px}
+.muted{color:var(--muted)}
+.small{font-size:12px}
+
+/* Buttons */
+.btn{display:inline-block;padding:12px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.15);color:var(--text);text-decoration:none}
+.btn:hover{filter:brightness(1.05)}
+.btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));border:0;color:#0b0b0c}
+
+/* Footer */
+.site-footer{padding:30px 0;border-top:1px solid rgba(255,255,255,.06);color:var(--muted);text-align:center}
+
+/* Responsive */
+@media (max-width: 900px){
+  .hero-grid{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .nav-toggle{display:block}
+  .nav{position:absolute;top:64px;right:10px;background:#141620;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:10px;display:none}
+  .nav[data-open="true"]{display:block}
+  .nav a{display:block;margin:10px}
+}
