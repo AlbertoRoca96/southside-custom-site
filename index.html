@@ -3,16 +3,26 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>South Side Custom Automotive • Mobile Welding, Detailing, Oil Changes</title>
   <meta name="description" content="Mobile welding for cars and farm equipment, oil changes, and exterior detailing. Call or text (434) 607-2514." />
   <meta name="keywords" content="mobile welding, farm equipment welding, automotive detailing, oil change, South Side Custom Automotive" />
+
+  <!-- Open Graph / Social -->
   <meta property="og:title" content="South Side Custom Automotive" />
   <meta property="og:description" content="Mobile welding • Oil changes • Exterior detailing" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/flyer.jpg" />
+  <meta property="og:url" content="" />
+
+  <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3ESS%3C/text%3E%3C/svg%3E">
+
+  <!-- Styles -->
   <link rel="preload" href="styles.css" as="style" />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured data (Schema.org) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -20,6 +30,7 @@
     "name": "South Side Custom Automotive",
     "telephone": "+1-434-607-2514",
     "image": "assets/flyer.jpg",
+    "areaServed": "Local",
     "makesOffer": {
       "@type": "OfferCatalog",
       "name": "Services",
@@ -32,10 +43,12 @@
   }
   </script>
 </head>
+
 <body>
   <header class="site-header" id="top">
     <div class="container">
       <a class="brand" href="#top" aria-label="South Side Custom Automotive home">South Side Custom Automotive</a>
+
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
       <nav class="nav" data-open="false">
         <a href="#services">Services</a>
@@ -46,40 +59,50 @@
   </header>
 
   <main>
+    <!-- HERO -->
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <h1>Mobile Welding, Oil Changes & Exterior Detailing</h1>
+          <h1>Mobile Welding, Oil Changes &amp; Exterior Detailing</h1>
           <p>Quality work, fair prices, and we come to you when needed. Call or text to get a quote and book a time.</p>
+
           <div class="cta-row">
+            <!-- tel: uses global format (+1…) so it works everywhere -->
             <a class="btn primary" href="tel:+14346072514">Call (434) 607-2514</a>
-            <a class="btn" href="sms:4346072514?&body=Hi%20South%20Side%20Custom%20Automotive%2C%20I'd%20like%20a%20quote.">Text us</a>
+            <!-- sms: opens the default messages app with the number filled in -->
+            <a class="btn" href="sms:4346072514?&body=Hi%20South%20Side%20Custom%20Automotive%2C%20I%27d%20like%20a%20quote.">Text us</a>
           </div>
+
           <ul class="badges">
             <li>Mobile service</li>
-            <li>Cars & farm equipment</li>
+            <li>Cars &amp; farm equipment</li>
             <li>Fast turnaround</li>
           </ul>
         </div>
+
         <div class="hero-media">
+          <!-- Use the flyer by default; swap to another asset if you prefer -->
           <img src="assets/flyer.jpg" alt="South Side Custom Automotive flyer" loading="eager" />
         </div>
       </div>
     </section>
 
+    <!-- SERVICES -->
     <section class="section" id="services">
       <div class="container">
         <h2>What we do</h2>
+
         <div class="cards">
           <article class="card">
             <h3>Mobile Welding</h3>
-            <p>Repairs & custom work for cars and farm equipment. We can travel to your site—ask for availability.</p>
+            <p>Repairs &amp; custom work for cars and farm equipment. We can travel to your site—ask for availability.</p>
             <ul>
               <li>MIG / stick repairs</li>
               <li>Brackets, exhaust, frames</li>
-              <li>Farm implements & trailers</li>
+              <li>Farm implements &amp; trailers</li>
             </ul>
           </article>
+
           <article class="card">
             <h3>Oil Changes</h3>
             <p>Quick oil &amp; filter changes. We’ll recommend the right oil for your vehicle and dispose of used oil properly.</p>
@@ -89,6 +112,7 @@
               <li>Fluids/top-offs check</li>
             </ul>
           </article>
+
           <article class="card">
             <h3>Exterior Detailing</h3>
             <p>Make your ride shine with hand wash, clay, and protective wax. Ask about paint correction add-ons.</p>
@@ -99,27 +123,38 @@
             </ul>
           </article>
         </div>
+
         <div class="note">Need something else? We can do a little bit of everything for the right price—just ask.</div>
       </div>
     </section>
 
+    <!-- GALLERY -->
     <section class="section" id="gallery">
       <div class="container">
         <h2>Recent work</h2>
+
         <div class="gallery">
           <figure><img src="assets/flyer.jpg" alt="Service flyer" loading="lazy" /></figure>
           <figure><img src="assets/car.jpg" alt="Work in progress" loading="lazy" /></figure>
+
+          <!-- Add more photos by dropping them in /assets and duplicating a block:
+          <figure><img src="assets/weld1.jpg" alt="Mobile welding repair" loading="lazy" /></figure>
+          <figure><img src="assets/detail1.jpg" alt="Exterior detailing finish" loading="lazy" /></figure>
+          -->
         </div>
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section class="section contact" id="contact">
       <div class="container contact-grid">
         <div>
           <h2>Get a quote</h2>
           <p>Call, text, or send a message. Share a photo of the job for the fastest estimate.</p>
+
           <p><strong>Phone:</strong> <a href="tel:+14346072514">(434) 607-2514</a></p>
           <p class="muted">Hours by appointment.</p>
+
           <div class="cta-row">
             <a class="btn primary" href="tel:+14346072514">Call now</a>
             <a class="btn" href="sms:4346072514?&body=Hi%2C%20can%20I%20get%20a%20quote%3F">Text now</a>
@@ -127,7 +162,7 @@
           </div>
         </div>
 
-        <!-- Replace the Formspree action with your own endpoint (or remove the form) -->
+        <!-- Replace the Formspree action with your endpoint, or remove the form if you prefer call/text only -->
         <form class="contact-form" action="https://formspree.io/f/xyyqlwzz" method="POST">
           <label>
             Your Name
@@ -154,6 +189,7 @@
     </div>
   </footer>
 
+  <!-- Nav toggle + dynamic year -->
   <script src="script.js" defer></script>
 </body>
 </html>
